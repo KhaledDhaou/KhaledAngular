@@ -1,0 +1,31 @@
+<p>index works!</p>
+<table class="table table-striped">
+  <thead>
+
+    <th>Image</th>
+    <th>Référence</th>
+    <th>Désignation</th>
+    <th>Quantité</th>
+    <th>Prix</th>
+    <th>Edit</th>
+    <th>Supprimer</th>
+
+
+  </thead>
+
+ <tbody>
+  <tr *ngFor="let p of produits">
+
+    <td><img src={{p.imageart}} alt="" width="50"/></td>
+    <td>{{p.reference}}</td>
+    <td>{{p.designation}}</td>
+    <td>{{p.qtestock}}</td>
+    <td>{{p.prix}}</td>
+
+    <td><button type="button" class="btn btn-warning">Edit</button></td>
+    <td><button type="button" class="btn btn-danger">Delete</button></td>
+ </tr>
+</tbody>
+
+
+</table>
