@@ -4,6 +4,9 @@ import { IndexComponent } from './index/index.component';
 import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
+import { ProduitcardComponent } from './produitcard/produitcard.component';
+
+
 
 
 
@@ -14,7 +17,8 @@ const routes: Routes = [
   { path: 'products/index', component: IndexComponent },
   { path: 'products/:productId/view', component:ViewComponent },
   { path: 'products/create', component:CreateComponent},
-  { path: 'products/:productId/edit', component: EditComponent }
+  { path: 'products/:productId/edit', component: EditComponent },
+  {path: '',component:ProduitcardComponent}
 
 
 ];

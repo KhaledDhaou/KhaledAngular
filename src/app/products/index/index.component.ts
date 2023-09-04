@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { Products } from '../products';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-index',
@@ -10,9 +11,20 @@ import { Products } from '../products';
 export class IndexComponent {
 
   produits: Products[]=[]
-constructor(private prsev:ProductsService){}
+constructor(private prserv:ProductsService){}
 ngOnInit(){
-  this.prsev.getAllArticles().subscribe((data:Products[])=>
+  this.prserv.getAllArticles().subscribe((data:Products[])=>
   this.produits=data)
 }
-}
+
+delarticle(id:any){
+  this.prserv.deleteArticle(id).subscribe(res => {
+    this.produits = this.produits.filter((item) =>item._id !== id);
+    console.log('Post deleted successfully!');
+    })
+    }
+
+
+  }
+
+
