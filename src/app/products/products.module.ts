@@ -8,7 +8,7 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { FormsModule } from '@angular/forms';
 import { ProduitcardComponent } from './produitcard/produitcard.component';
-
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,9 @@ import { ProduitcardComponent } from './produitcard/produitcard.component';
   imports: [
     CommonModule,
     ProductsRoutingModule,
-     FormsModule
+     FormsModule,
+    DataTablesModule
+
 
 
   ]

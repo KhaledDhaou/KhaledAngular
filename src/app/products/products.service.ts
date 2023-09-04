@@ -29,13 +29,13 @@ import { Products } from './products';
      }
 
      getarticle(id:object):Observable<Products>{
-      return this.http.get(this.baseurl+id)
+      return this.http.get(this.baseurl+ "/" +id)
     }
 
     updatearticle(_id:object,prod:Products):Observable<any>{
-      return this.http.put(this.baseurl + _id,prod)
+      return this.http.put(this.baseurl + "/" + _id,prod)
     }
 
-    
+
     }
 

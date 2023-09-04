@@ -1,8 +1,8 @@
 <p>index works!</p>
 <app-create></app-create>
-<table datatable class="table table-hover table-bordered" *ngIf="produits">
+<table datatable *ngIf="produits.length !=0" class="table table-hover table-bordered" >
   <thead>
-
+    <tr>
     <th>Image</th>
     <th>Référence</th>
     <th>Désignation</th>
@@ -10,7 +10,7 @@
     <th>Prix</th>
     <th>Edit</th>
     <th>Supprimer</th>
-
+  </tr>
 
   </thead>
 
@@ -23,10 +23,11 @@
     <td>{{p.qtestock}}</td>
     <td>{{p.prix}}</td>
 
-    <td><button type="button" class="btn btn-warning">
-      <i class="bi bi-pencil-square"></i>
-    </button></td>
+    <td>
+       <app-edit [productId]="p._id"></app-edit>
+    </td>
 
+   
     <td><button type="button" class="btn btn-danger" (click)="delarticle(p._id)">
       <i class="bi bi-trash3"></i>
     </button></td>
